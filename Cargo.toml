@@ -1,0 +1,16 @@
+[package]
+name = "ZoniOS"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bootloader_api = "0.11.17"
+noto-sans-mono-bitmap = "0.4.0"
+
+# Optimizaciones del compilador para que el renderizado gráfico vuele
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = true
